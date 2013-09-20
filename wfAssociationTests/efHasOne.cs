@@ -23,7 +23,33 @@ namespace wfAssociationTests
 
 
     //-----------------------------------  HAS MANY ---------------------------------------------------------------
+    public class efHasMany
+    {
+        public int Id { get; set; }
+        public List<efHasManyAssociation> members { get; set; } 
+    }
 
+    public class efHasManyAssociation
+    {
+        public int Id { get; set; }
+        public String Label { get; set; }
+    }
 
     //-----------------------------------  MANY MANY --------------------------------------------------------------
+    public class efManyMany
+    {
+        public int Id { get; set; }
+        public List<efManyManyAssociation> members { get; set; } 
+    }
+
+    public class efManyManyAssociation
+    {
+        public int Id { get; set; }
+        public List<efManyMany> members { get; set; }
+    }
+
+    // //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // /   Helper Methods //////
+    // //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 }
